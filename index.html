@@ -106,31 +106,151 @@
         </ul>
       </section>
 
-      <hr />
+      <hr/>
 
+      <!-- Contact Section -->
       <section id="contact">
         <h2>Contact Me</h2>
-        <p>You can reach me through any of these:</p>
-        <ul>
-          <li>
-            Email -
-            <a href="mailto:darshanwagheshvari12@gmail.com">
-                darshanwagheshvari12@gmail.com
-                </a>
-          </li>
-          <li>Phone - <a href="tel:+918320367605">+91 83203 67605</a></li>
-          <li>
-            GitHub -
-            <a href="https://github.com/darshan1221-web">
-                github.com/darshan1221-web
-                </a>
-          </li>
-        </ul>
+
+        <p>Feel free to contact me using the form below.</p>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+          <!-- Full Name -->
+          <div>
+            <label for="fullname"> Full Name: </label>
+
+            <br />
+
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <br/>
+
+          <!-- Email Address -->
+          <div>
+            <label for="email"> Email Address: </label>
+
+            <br/>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required/>
+          </div>
+
+          <br/>
+
+          <!-- Phone Number -->
+          <div>
+            <label for="phone"> Phone Number: </label>
+
+            <br/>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required/>
+          </div>
+
+          <br/>
+
+          <!-- Subject -->
+          <div>
+            <label for="subject"> Subject: </label>
+            <br/>
+
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Enter subject"
+              required/>
+          </div>
+
+          <br/>
+
+          <!-- Message -->
+          <div>
+            <label for="message"> Message: </label>
+            <br/>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="30"
+              placeholder="Write your message here"
+              required>
+            </textarea>
+          </div>
+
+          <br/>
+
+          <!-- Buttons -->
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+
+        <br/>
+
+        <!-- Additional Contact Information -->
+        <p>
+          Email:
+          <a href="mailto:darshanwagheshvari12@gmail.com">
+            darshanwagheshvari12@gmail.com
+          </a>
+        </p>
+
+        <p>
+          Phone:
+          <a href="tel:+918320367605"> +91 83203 67605 </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a href="https://github.com/darshan1221-web" target="_blank">
+            github.com/darshan1221-web
+          </a>
+        </p>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Darshan Wagheshvari. All Rights Reserved.</p>
     </footer>
+
+    <script>
+      const contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById("fullname").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        console.log("---- Contact Form Data ----");
+        console.log("Full Name:", fullName);
+        console.log("Email:", email);
+        console.log("Phone:", phone);
+        console.log("Subject:", subject);
+        console.log("Message:", message);
+      });
+    </script>
   </body>
 </html>
